@@ -60,6 +60,7 @@
     <Compile Include="Model\Entity\ProductType.cs" />
     <Compile Include="Model\Entity\Store.cs" />
     <Compile Include="Model\Entity\StoreDepot.cs" />
+    <Compile Include="Model\Logic\Saver.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,12 @@
     </Compile>
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,7 +87,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CourseWorkDB.Model.Entity.Product.datasource" />
+    <None Include="Properties\DataSources\CourseWorkDB.Model.Entity.ProductType.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,8 +106,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Logic\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

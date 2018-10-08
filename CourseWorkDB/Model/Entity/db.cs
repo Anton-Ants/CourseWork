@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace CourseWorkDB.Model.Entity
 {
-    class db : DbContext
+    class ShopContext : DbContext
     {
-        public db()
+        public ShopContext()
           : base("DbConnection")
         { }
 
-        public DbSet<db> Users { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
     }
 }

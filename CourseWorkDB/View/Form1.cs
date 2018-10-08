@@ -26,5 +26,15 @@ namespace CourseWorkDB
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void productBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
