@@ -1,0 +1,15 @@
+E:\C#\GitHub\CourseWork\CourseWorkDB\bin\Debug\CourseWorkDB.exe.config
+E:\C#\GitHub\CourseWork\CourseWorkDB\bin\Debug\CourseWorkDB.exe
+E:\C#\GitHub\CourseWork\CourseWorkDB\bin\Debug\CourseWorkDB.pdb
+E:\C#\GitHub\CourseWork\CourseWorkDB\bin\Debug\EntityFramework.dll
+E:\C#\GitHub\CourseWork\CourseWorkDB\bin\Debug\EntityFramework.SqlServer.dll
+E:\C#\GitHub\CourseWork\CourseWorkDB\bin\Debug\EntityFramework.xml
+E:\C#\GitHub\CourseWork\CourseWorkDB\bin\Debug\EntityFramework.SqlServer.xml
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csprojAssemblyReference.cache
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.Form1.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.Properties.Resources.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csproj.GenerateResource.cache
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csproj.CoreCompileInputs.cache
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csproj.CopyComplete
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.exe
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.pdb

@@ -8,5 +8,9 @@ namespace CourseWorkDB.Model.Entity
 {
     class StoreDepot
     {
+        public int Id { get; set; }
+        public string ProductId { get; set; }
+        public string SoldData { get; set; }
+        public int Count { get; set; }
     }
 }

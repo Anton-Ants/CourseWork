@@ -9,9 +9,9 @@ namespace CourseWorkDB.Model.Entity
     class GoodsSold
     {
         public int Id { get; set; }
-        public string productId { get; set; }
-        public decimal count { get; set; }
-        public string data { get; set; }
-        public string storeId { get; set; }
+        public string ProductId { get; set; }
+        public int Count { get; set; }
+        public string Data { get; set; }
+        public string StoreId { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace CourseWorkDB.Model.Entity
     class ProductType
     {
         public int Id { get; set; }
-        public string type { get; set; }
+        public string Type { get; set; }
     }
 }

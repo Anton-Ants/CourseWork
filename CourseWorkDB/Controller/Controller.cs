@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CourseWorkDB.Model.Entity;
 
 namespace CourseWorkDB
 {
@@ -17,6 +18,7 @@ namespace CourseWorkDB
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+            Product product = new Product();
         }
     }
 }

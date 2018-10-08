@@ -9,7 +9,7 @@ namespace CourseWorkDB.Model.Entity
     class Depot
     {
         public int Id { get; set; }
-        public string productId { get; set; }
-        public decimal count { get; set; }
+        public string ProductId { get; set; }
+        public int Count { get; set; }
     }
 }
