@@ -13,3 +13,4 @@ E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csproj.CoreCompileIn
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csproj.CopyComplete
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.exe
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.pdb
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.Form2.resources

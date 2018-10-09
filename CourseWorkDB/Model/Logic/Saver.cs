@@ -18,6 +18,16 @@ namespace CourseWorkDB.Model.Logic
             db.ProductTypes.Add(type);
         }
 
+        public void AddProduct(Product product)
+        {
+            db.Products.Add(product);
+        }
+
+        public void AddDepot(Depot depot)
+        {
+            db.Depot.Add(depot);
+        }
+
         public void SaveDb()
         {
             db.SaveChanges();

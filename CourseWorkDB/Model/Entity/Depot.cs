@@ -9,7 +9,18 @@ namespace CourseWorkDB.Model.Entity
     class Depot
     {
         public int Id { get; set; }
-        public string ProductId { get; set; }
         public int Count { get; set; }
+
+        public virtual ICollection<Product> ProductId { get; set; }
+
+        public Depot()
+        {
+            ProductId = new List<Product>();
+        }
+
+        public override string ToString()
+        {
+            return Convert.ToString(Count);
+        }
     }
 }

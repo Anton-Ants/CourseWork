@@ -15,5 +15,6 @@ namespace CourseWorkDB.Model.Entity
 
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
+        public DbSet<Depot> Depot { get; set; }
     }
 }

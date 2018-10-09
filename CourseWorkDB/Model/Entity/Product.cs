@@ -16,5 +16,10 @@ namespace CourseWorkDB.Model.Entity
 
         public int? ProductTypeId { get; set; }
         public virtual ProductType ProductType { get; set; }
+
+      
+        public virtual Depot Depot { get; set; }
+
+        
     }
 }
