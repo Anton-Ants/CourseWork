@@ -9,9 +9,14 @@ namespace CourseWorkDB.Model.Logic
 {
     class Saver
     {
-        ShopContext db = new ShopContext();
-        ProductType type = new ProductType ();
-        
+        ShopContext db = null;
+       
+
+
+        public Saver(ShopContext shopContext)
+        {
+            db = shopContext;
+        }
 
         public void AddType(ProductType type)
         {
@@ -25,9 +30,13 @@ namespace CourseWorkDB.Model.Logic
 
         public void AddDepot(Depot depot)
         {
-            db.Depot.Add(depot);
+            db.Depots.Add(depot);
         }
 
+        public void AddStore(Store store)
+        {
+            db.Stores.Add(store);
+        }
         public void SaveDb()
         {
             db.SaveChanges();

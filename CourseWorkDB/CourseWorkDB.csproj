@@ -60,7 +60,6 @@
     <Compile Include="Model\Entity\Product.cs" />
     <Compile Include="Model\Entity\ProductType.cs" />
     <Compile Include="Model\Entity\Store.cs" />
-    <Compile Include="Model\Entity\StoreDepot.cs" />
     <Compile Include="Model\Logic\Saver.cs" />
     <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
