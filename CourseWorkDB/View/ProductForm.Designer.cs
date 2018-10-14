@@ -33,9 +33,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storesDBDataSet = new CourseWorkDB.StoresDBDataSet();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,12 +45,17 @@
             this.txtCost = new System.Windows.Forms.TextBox();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.productTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storesDBDataSet = new CourseWorkDB.StoresDBDataSet();
             this.productTypesTableAdapter = new CourseWorkDB.StoresDBDataSetTableAdapters.ProductTypesTableAdapter();
+            this.productsTableAdapter = new CourseWorkDB.StoresDBDataSetTableAdapters.ProductsTableAdapter();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productTypesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -85,6 +89,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // dgvProduct
             // 
@@ -93,10 +98,11 @@
             this.dgvProduct.BackgroundColor = System.Drawing.SystemColors.HighlightText;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.nameDataGridViewTextBoxColumn,
             this.weightDataGridViewTextBoxColumn,
             this.costDataGridViewTextBoxColumn});
-            this.dgvProduct.DataSource = this.productBindingSource;
+            this.dgvProduct.DataSource = this.productsBindingSource;
             this.dgvProduct.GridColor = System.Drawing.Color.YellowGreen;
             this.dgvProduct.Location = new System.Drawing.Point(509, 12);
             this.dgvProduct.Name = "dgvProduct";
@@ -105,27 +111,17 @@
             this.dgvProduct.Size = new System.Drawing.Size(533, 241);
             this.dgvProduct.TabIndex = 5;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
+            this.dgvProduct.DoubleClick += new System.EventHandler(this.dgvProduct_DoubleClick);
             // 
-            // nameDataGridViewTextBoxColumn
+            // productsBindingSource
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.storesDBDataSet;
             // 
-            // weightDataGridViewTextBoxColumn
+            // storesDBDataSet
             // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            this.storesDBDataSet.DataSetName = "StoresDBDataSet";
+            this.storesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // productBindingSource
             // 
@@ -206,14 +202,42 @@
             this.productTypesBindingSource.DataMember = "ProductTypes";
             this.productTypesBindingSource.DataSource = this.storesDBDataSet;
             // 
-            // storesDBDataSet
-            // 
-            this.storesDBDataSet.DataSetName = "StoresDBDataSet";
-            this.storesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // productTypesTableAdapter
             // 
             this.productTypesTableAdapter.ClearBeforeFill = true;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // weightDataGridViewTextBoxColumn
+            // 
+            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
+            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ProductForm
             // 
@@ -237,9 +261,10 @@
             this.Text = "Product";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productTypesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,13 +283,16 @@
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.TextBox txtCost;
         private System.Windows.Forms.ComboBox comboBoxType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource productBindingSource;
         private StoresDBDataSet storesDBDataSet;
         private System.Windows.Forms.BindingSource productTypesBindingSource;
         private StoresDBDataSetTableAdapters.ProductTypesTableAdapter productTypesTableAdapter;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private StoresDBDataSetTableAdapters.ProductsTableAdapter productsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
     }
 }
 
