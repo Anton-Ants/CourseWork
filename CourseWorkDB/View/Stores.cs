@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourseWorkDB.View
 {
-    public partial class Form2 : Form
+    public partial class Stores : Form
     {
-        public Form2()
+        public Stores()
         {
             InitializeComponent();
         }

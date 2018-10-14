@@ -16,10 +16,12 @@ namespace CourseWorkDB.Model.Entity
 
         public virtual ICollection<Product> Products { get; set; }
 
-        public ProductType()
+        public ProductType(string text)
         {
             Products = new List<Product>();
+            Type = text;
         }
+
 
         public override string ToString()
         {
