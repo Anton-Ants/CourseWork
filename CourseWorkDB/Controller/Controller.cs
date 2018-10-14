@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CourseWorkDB.Model.Entity;
 using CourseWorkDB.Model.Logic;
+using CourseWorkDB.View;
 
 namespace CourseWorkDB
 {
@@ -18,7 +19,7 @@ namespace CourseWorkDB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProductForm());
+            Application.Run(new MenuForm());
 
             using (ShopContext db = new ShopContext())
             {

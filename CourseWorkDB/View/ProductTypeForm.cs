@@ -8,44 +8,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CourseWorkDB.StoresDBDataSetTableAdapters;
 
 namespace CourseWorkDB.View
 {
-    public partial class ProductType : Form
+    public partial class ProductTypeForm : Form
     {
-        ProductType type1 = new ProductType();
+        ProductType ProductType = new ProductType();
 
-        public ProductType()
+        public ProductTypeForm()
         {
             InitializeComponent();
         }
 
-        private void ProductType_Load(object sender, EventArgs e)
+        private void ProductTypeForm1_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.ProductTypes". При необходимости она может быть перемещена или удалена.
             this.productTypesTableAdapter.Fill(this.storesDBDataSet.ProductTypes);
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-           
+            ProductType.Type = txtType.Text;
             using (ShopContext db = new ShopContext())
             {
-                
-                db.ProductTypes.Add();
+                db.ProductTypes.Add(ProductType);
                 db.SaveChanges();
             }
-            Clear(); 
+            Clear();
             PopulateDataGridView();
+            MessageBox.Show("ProductType Add");
         }
 
         void Clear()
         {
-            txtType.Text = "";
+            txtType.Text ="";
             btnAdd.Text = "Save";
-            
+            btnDelete.Enabled = false;
+            ProductType.Id = 0;
         }
 
         void PopulateDataGridView()
@@ -56,5 +56,9 @@ namespace CourseWorkDB.View
             }
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

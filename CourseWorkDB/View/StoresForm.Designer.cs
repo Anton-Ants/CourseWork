@@ -1,6 +1,6 @@
 ﻿namespace CourseWorkDB.View
 {
-    partial class Stores
+    partial class StoresForm
     {
         /// <summary>
         /// Required designer variable.

@@ -12,6 +12,6 @@ E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csproj.CoreCompileIn
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.csproj.CopyComplete
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.exe
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.pdb
-E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.Form2.resources
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.ProductForm.resources
-E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.ProductType.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.ProductTypeForm.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.MenuForm.resources
