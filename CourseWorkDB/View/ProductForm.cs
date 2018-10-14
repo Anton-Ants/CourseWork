@@ -35,8 +35,7 @@ namespace CourseWorkDB
 
         public void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-           
+            
            
         }
 
@@ -56,19 +55,16 @@ namespace CourseWorkDB
         
         private void btnAdd_Click(object sender, EventArgs e) 
         {
-            //ProductType type = new ProductType { Type = comboBoxType.Text };
-            product.Name = txtName.Text.Trim();
-            product.Weight = Convert.ToDouble(txtWeight.Text);
-            product.Cost = Convert.ToDecimal(txtCost.Text);
-            MessageBox.Show(comboBoxType.Text);
-            //product.ProductType.Id = Convert.ToInt32(comboBoxType.SelectedValue);
-            type.Id = Convert.ToInt32(comboBoxType.SelectedValue);
-            product.ProductType = type;
-            
-
 
             using (ShopContext db = new ShopContext())
             {
+            
+                product.Name = txtName.Text.Trim();
+                product.Weight = Convert.ToDouble(txtWeight.Text);
+                product.Cost = Convert.ToDecimal(txtCost.Text);
+                MessageBox.Show(comboBoxType.Text);
+            
+                product.ProductType = db.ProductTypes.FirstOrDefault(x => x.Id == (int)comboBoxType.SelectedValue); 
                 db.Products.Add(product);
                 db.SaveChanges();
             }
