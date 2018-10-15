@@ -52,7 +52,7 @@ namespace CourseWorkDB.View
         {
             using (ShopContext db = new ShopContext())
             {
-                dgvProductType.DataSource = db.Products.ToList<Product>();
+                dgvProductType.DataSource = db.ProductTypes.ToList<ProductType>();
             }
         }
 

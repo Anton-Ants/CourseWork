@@ -59,14 +59,13 @@ namespace CourseWorkDB
         private void btnAdd_Click(object sender, EventArgs e) 
         {
 
-            using (ShopContext db = new ShopContext())
+            using (ShopContext db = new ShopContext()) 
             {
             
                 product.Name = txtName.Text.Trim();
                 product.Weight = Convert.ToDouble(txtWeight.Text);
                 product.Cost = Convert.ToDecimal(txtCost.Text);    
                 product.ProductType = db.ProductTypes.FirstOrDefault(x => x.Id == (int)comboBoxType.SelectedValue);
-
 
                 if (product.Id == 0)
                     db.Products.Add(product);
@@ -121,8 +120,6 @@ namespace CourseWorkDB
                     db.SaveChanges();
                     PopulateDataGridView();
                     Clear();
-                     
-
                 }
 
         }

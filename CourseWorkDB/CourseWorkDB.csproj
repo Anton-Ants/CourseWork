@@ -126,6 +126,9 @@
     <EmbeddedResource Include="View\ProductTypeForm.resx">
       <DependentUpon>ProductTypeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\StoresForm.resx">
+      <DependentUpon>StoresForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CourseWorkDB.Model.Entity.Product.datasource" />
     <None Include="Properties\DataSources\CourseWorkDB.Model.Entity.ProductType.datasource" />

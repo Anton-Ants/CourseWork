@@ -15,3 +15,4 @@ E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.pdb
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.ProductForm.resources
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.ProductTypeForm.resources
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.MenuForm.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.StoresForm.resources

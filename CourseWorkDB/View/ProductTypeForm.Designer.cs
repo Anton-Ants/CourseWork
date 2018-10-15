@@ -121,7 +121,7 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // ProductTypeForm1
+            // ProductTypeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,7 +131,7 @@
             this.Controls.Add(this.dgvProductType);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtType);
-            this.Name = "ProductTypeForm1";
+            this.Name = "ProductTypeForm";
             this.Text = "ProductTypeForm1";
             this.Load += new System.EventHandler(this.ProductTypeForm1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductType)).EndInit();

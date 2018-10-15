@@ -28,5 +28,11 @@ namespace CourseWorkDB.View
             ProductTypeForm typeForm = new ProductTypeForm();
             typeForm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StoresForm storesForm = new StoresForm();
+            storesForm.Show();
+        }
     }
 }
