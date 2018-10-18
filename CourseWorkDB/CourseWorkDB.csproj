@@ -69,6 +69,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201810181757061_AddGoodsSold.cs" />
+    <Compile Include="Migrations\201810181757061_AddGoodsSold.Designer.cs">
+      <DependentUpon>201810181757061_AddGoodsSold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Entity\db.cs" />
     <Compile Include="Model\Entity\Depot.cs" />
     <Compile Include="Model\Entity\GoodsSold.cs" />
@@ -81,6 +86,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StoresDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddProductInStoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddProductInStoreForm.Designer.cs">
+      <DependentUpon>AddProductInStoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GoodsSoldForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GoodsSoldForm.Designer.cs">
+      <DependentUpon>GoodsSoldForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MenuForm.cs">
       <SubType>Form</SubType>
@@ -108,6 +125,15 @@
     <Compile Include="View\StoresForm.Designer.cs">
       <DependentUpon>StoresForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\201810181757061_AddGoodsSold.resx">
+      <DependentUpon>201810181757061_AddGoodsSold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddProductInStoreForm.resx">
+      <DependentUpon>AddProductInStoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GoodsSoldForm.resx">
+      <DependentUpon>GoodsSoldForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +156,7 @@
       <DependentUpon>StoresForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CourseWorkDB.Model.Entity.GoodsSold.datasource" />
     <None Include="Properties\DataSources\CourseWorkDB.Model.Entity.Product.datasource" />
     <None Include="Properties\DataSources\CourseWorkDB.Model.Entity.ProductType.datasource" />
     <None Include="Properties\Settings.settings">

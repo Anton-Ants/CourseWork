@@ -34,5 +34,11 @@ namespace CourseWorkDB.View
             StoresForm storesForm = new StoresForm();
             storesForm.Show();
         }
+
+        private void btnGoodsSold_Click(object sender, EventArgs e)
+        {
+            GoodsSoldForm GoodsSoldForm = new GoodsSoldForm();
+            GoodsSoldForm.Show();
+        }
     }
 }

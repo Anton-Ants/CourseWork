@@ -12,14 +12,19 @@ namespace CourseWorkDB.Model.Entity
         public string Name { get; set; }
         public double Weight { get; set; }
         public decimal Cost { get; set; }
+        public int Quantity { get; set; }
         
+        
+
+
         public virtual ProductType ProductType { get; set; }
        
         public ICollection<Depot> Depots { get; set; }
 
+
         public Product()
         {
-            Depots = new List<Depot>();
+            Depots = new List<Depot>();  
         }
     }
 }

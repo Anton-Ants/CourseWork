@@ -13,5 +13,16 @@ namespace CourseWorkDB.Model.Entity
         public int Count { get; set; }
         public string Data { get; set; }
         public string StoreId { get; set; }
+
+        public Store Store { get; set; }
+
+        public virtual ICollection<Product> Products { get; set; }
+
+        public GoodsSold()
+        {
+            Products = new List<Product>();
+
+        }
+
     }
 }

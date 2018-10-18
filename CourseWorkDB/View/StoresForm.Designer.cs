@@ -32,20 +32,21 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvStore = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storesDBDataSet = new CourseWorkDB.StoresDBDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.storesDBDataSet = new CourseWorkDB.StoresDBDataSet();
-            this.storesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.storesTableAdapter = new CourseWorkDB.StoresDBDataSetTableAdapters.StoresTableAdapter();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -82,9 +83,38 @@
             this.dgvStore.Location = new System.Drawing.Point(326, 12);
             this.dgvStore.Name = "dgvStore";
             this.dgvStore.RowTemplate.Height = 24;
-            this.dgvStore.Size = new System.Drawing.Size(462, 222);
+            this.dgvStore.Size = new System.Drawing.Size(462, 260);
             this.dgvStore.TabIndex = 2;
             this.dgvStore.DoubleClick += new System.EventHandler(this.dgvStore_DoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // storesBindingSource
+            // 
+            this.storesBindingSource.DataMember = "Stores";
+            this.storesBindingSource.DataSource = this.storesDBDataSet;
+            // 
+            // storesDBDataSet
+            // 
+            this.storesDBDataSet.DataSetName = "StoresDBDataSet";
+            this.storesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -128,44 +158,26 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // storesDBDataSet
-            // 
-            this.storesDBDataSet.DataSetName = "StoresDBDataSet";
-            this.storesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storesBindingSource
-            // 
-            this.storesBindingSource.DataMember = "Stores";
-            this.storesBindingSource.DataSource = this.storesDBDataSet;
-            // 
             // storesTableAdapter
             // 
             this.storesTableAdapter.ClearBeforeFill = true;
             // 
-            // Id
+            // btnAddProduct
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.btnAddProduct.Location = new System.Drawing.Point(51, 232);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(232, 34);
+            this.btnAddProduct.TabIndex = 10;
+            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // StoresForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 246);
+            this.ClientSize = new System.Drawing.Size(800, 284);
+            this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtName);
@@ -178,8 +190,8 @@
             this.Text = "Stores";
             this.Load += new System.EventHandler(this.StoresForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +213,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnAddProduct;
     }
 }

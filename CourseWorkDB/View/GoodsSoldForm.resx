@@ -117,10 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>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</value>
-  </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
-  </data>
+  <metadata name="productsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>684, 17</value>
+  </metadata>
+  <metadata name="storesDBDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 17</value>
+  </metadata>
+  <metadata name="storesDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="storesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1107, 17</value>
+  </metadata>
+  <metadata name="goodsSoldBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>456, 17</value>
+  </metadata>
+  <metadata name="productsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>899, 17</value>
+  </metadata>
+  <metadata name="storesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 60</value>
+  </metadata>
 </root>

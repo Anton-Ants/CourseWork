@@ -7,13 +7,13 @@ namespace CourseWorkDB.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class _4in1 : IMigrationMetadata
+    public sealed partial class AddGoodsSold : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(_4in1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddGoodsSold));
         
         string IMigrationMetadata.Id
         {
-            get { return "201810101551389_4 in 1"; }
+            get { return "201810181757061_AddGoodsSold"; }
         }
         
         string IMigrationMetadata.Source

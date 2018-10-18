@@ -117,10 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>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</value>
-  </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
-  </data>
+  <metadata name="storesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 17</value>
+  </metadata>
+  <metadata name="storesDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="productsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>572, 17</value>
+  </metadata>
+  <metadata name="storesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>383, 17</value>
+  </metadata>
+  <metadata name="productsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>787, 17</value>
+  </metadata>
 </root>

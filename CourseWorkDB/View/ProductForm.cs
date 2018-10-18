@@ -17,6 +17,8 @@ namespace CourseWorkDB
 
         Product product = new Product();
         ProductType type = new ProductType();
+        Store store = new Store();
+        Depot depot = new Depot();
         public ProductForm()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace CourseWorkDB
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.Stores". При необходимости она может быть перемещена или удалена.
+            this.storesTableAdapter.Fill(this.storesDBDataSet.Stores);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.Products". При необходимости она может быть перемещена или удалена.
             this.productsTableAdapter.Fill(this.storesDBDataSet.Products);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.ProductTypes". При необходимости она может быть перемещена или удалена.
@@ -44,7 +48,7 @@ namespace CourseWorkDB
 
         void Clear()
         {
-            txtName.Text = txtWeight.Text = txtCost.Text = "";
+            txtName.Text = txtWeight.Text = txtCost.Text = txtQuantity.Text = "";
             btnAdd.Text = "Save";
             btnDelete.Enabled = false;
             product.Id = 0;
@@ -64,7 +68,8 @@ namespace CourseWorkDB
             
                 product.Name = txtName.Text.Trim();
                 product.Weight = Convert.ToDouble(txtWeight.Text);
-                product.Cost = Convert.ToDecimal(txtCost.Text);    
+                product.Cost = Convert.ToDecimal(txtCost.Text);
+                product.Quantity = Convert.ToInt32(txtQuantity.Text);
                 product.ProductType = db.ProductTypes.FirstOrDefault(x => x.Id == (int)comboBoxType.SelectedValue);
 
                 if (product.Id == 0)
@@ -102,9 +107,14 @@ namespace CourseWorkDB
                     txtName.Text = product.Name;
                     txtWeight.Text = Convert.ToString(product.Weight);
                     txtCost.Text = Convert.ToString(product.Cost);
+                    txtQuantity.Text = Convert.ToString(product.Quantity);
                 }
                 btnAdd.Text = "Update";
                 btnDelete.Enabled = true;
+
+                labelStore.Visible = true;
+                btnAddInStore.Visible = true;
+                comboBoxStore.Visible = true;
             }
         }
 
@@ -121,6 +131,33 @@ namespace CourseWorkDB
                     PopulateDataGridView();
                     Clear();
                 }
+
+        }
+
+        private void btnAddInStore_Click(object sender, EventArgs e)
+        {
+          /*  using (ShopContext db = new ShopContext())
+            {
+                product.Name = txtName.Text.Trim();
+                product.Weight = Convert.ToDouble(txtWeight.Text);
+                product.Cost = Convert.ToDecimal(txtCost.Text);
+                product.ProductType = db.ProductTypes.FirstOrDefault(x => x.Id == (int)comboBoxType.SelectedValue);
+                store = db.Stores.FirstOrDefault(x => x.Id == (int)comboBoxStore.SelectedValue);
+                store.Depot = db.Depots.FirstOrDefault(x => x.Id == (int)comboBoxStore.SelectedValue);
+                store.Depot.Products.Add(product);
+                db.SaveChanges();
+            }*/
+            
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

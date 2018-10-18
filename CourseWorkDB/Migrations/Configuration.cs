@@ -10,7 +10,6 @@ namespace CourseWorkDB.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CourseWorkDB.Model.Entity.ShopContext";
         }
 
         protected override void Seed(CourseWorkDB.Model.Entity.ShopContext context)

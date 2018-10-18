@@ -34,7 +34,7 @@ namespace CourseWorkDB.View
         private void StoresForm_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.Stores". При необходимости она может быть перемещена или удалена.
-            this.storesTableAdapter.Fill(this.storesDBDataSet.Stores);
+           // this.storesTableAdapter.Fill(this.storesDBDataSet.Stores);
 
         }
 
@@ -59,10 +59,11 @@ namespace CourseWorkDB.View
         {
             using (ShopContext db = new ShopContext())
             {
+
                 store.Name = txtName.Text.Trim();
                 store.Address = txtAddress.Text.Trim();
                 store.Depot = depot;
-
+               
                 if (store.Id == 0)
                     db.Stores.Add(store);
                 else
@@ -83,7 +84,8 @@ namespace CourseWorkDB.View
                     var entry = db.Entry(store);
                     if (entry.State == EntityState.Detached)
                         db.Stores.Attach(store);
-                    db.Stores.Remove(store);
+ 
+                    db.Stores.Remove(store);                  
                     db.SaveChanges();
                     PopulateDataGridView();
                     Clear();
@@ -108,6 +110,13 @@ namespace CourseWorkDB.View
             }
             btnAdd.Text = "Update";
             btnDelete.Enabled = true;
+            
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProductInStoreForm AddProductInStoreForm = new AddProductInStoreForm();
+            AddProductInStoreForm.Show();
         }
     }
 }

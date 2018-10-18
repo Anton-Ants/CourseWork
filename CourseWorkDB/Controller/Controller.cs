@@ -23,9 +23,9 @@ namespace CourseWorkDB
 
             using (ShopContext db = new ShopContext())
             {
-                Saver saver = new Saver(db);
+                /*Saver saver = new Saver(db);
                               
-                /*ProductType type1 = new ProductType{ Type = "Крупы" };
+                ProductType type1 = new ProductType{ Type = "Крупы" };
                 ProductType type2 = new ProductType { Type = "Напитки" };
                 saver.AddType(type1);
                 saver.AddType(type2);
@@ -46,8 +46,8 @@ namespace CourseWorkDB
 
                 db.Stores.Add(store1);
                 db.Stores.Add(store2);
-                saver.SaveDb();
- */
+                saver.SaveDb();*/
+ 
 
             }
            

@@ -16,3 +16,6 @@ E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.ProductForm.resource
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.ProductTypeForm.resources
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.MenuForm.resources
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.StoresForm.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.AddProductInStoreForm.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.GoodsSoldForm.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.Migrations.AddGoodsSold.resources
