@@ -164,18 +164,20 @@ namespace CourseWorkDB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String searchValue = "somestring";
-            int rowIndex = 0;
-            foreach (DataGridViewRow row in dgvProduct.Rows)
-            {
-                if (row.Cells[1].Value.ToString().Equals(searchValue))
-                {
-                    rowIndex = row.Index;
-                    break;
-                }
-            }
+ 
+        }
 
-            dgvProduct.Rows[rowIndex].Selected = true;
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (ShopContext db = new ShopContext())
+            {
+                dgvProduct.DataSource = db.Products.Where(x => x.Name.Contains(txtSearch.Text)).ToList();
+            }
         }
     }
 }

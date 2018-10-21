@@ -61,8 +61,8 @@
             this.labelStore = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
@@ -338,24 +338,24 @@
             this.label5.Text = "Quantity";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox1
+            // txtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(592, 340);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 22);
-            this.textBox1.TabIndex = 21;
+            this.txtSearch.Location = new System.Drawing.Point(592, 340);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(468, 22);
+            this.txtSearch.TabIndex = 21;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
-            // button1
+            // label6
             // 
-            this.button1.BackColor = System.Drawing.Color.YellowGreen;
-            this.button1.Location = new System.Drawing.Point(898, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 37);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(524, 343);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 17);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Search";
             // 
             // ProductForm
             // 
@@ -363,8 +363,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1072, 382);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelStore);
@@ -429,8 +429,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn depotsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label6;
     }
 }
 
