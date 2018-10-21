@@ -11,13 +11,9 @@ namespace CourseWorkDB.Model.Entity
     class Depot
     {      
         public int Id { get; set; }
-       /* public int ProductId { get; set; }
-        public int ComingProduct { get; set; }
-        public int Standard { get; set; }
-        public int Quantity { get; set; }
-        public DateTime DateBringing { get; set; }
-        */
 
+      // [Required]
+        public int? StoreId { get; set; }
         public Store Store { get; set; }
        
         public ICollection<Product> Products { get; set; }

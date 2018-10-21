@@ -32,15 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxStore = new System.Windows.Forms.ComboBox();
-            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.storesDBDataSet = new CourseWorkDB.StoresDBDataSet();
             this.storesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.storesTableAdapter = new CourseWorkDB.StoresDBDataSetTableAdapters.StoresTableAdapter();
+            this.storesDBDataSet = new CourseWorkDB.StoresDBDataSet();
+            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.storesTableAdapter = new CourseWorkDB.StoresDBDataSetTableAdapters.StoresTableAdapter();
             this.productsTableAdapter = new CourseWorkDB.StoresDBDataSetTableAdapters.ProductsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +72,17 @@
             this.comboBoxStore.Size = new System.Drawing.Size(188, 24);
             this.comboBoxStore.TabIndex = 2;
             this.comboBoxStore.ValueMember = "Id";
+            this.comboBoxStore.SelectedIndexChanged += new System.EventHandler(this.comboBoxStore_SelectedIndexChanged);
+            // 
+            // storesBindingSource
+            // 
+            this.storesBindingSource.DataMember = "Stores";
+            this.storesBindingSource.DataSource = this.storesDBDataSet;
+            // 
+            // storesDBDataSet
+            // 
+            this.storesDBDataSet.DataSetName = "StoresDBDataSet";
+            this.storesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBoxProduct
             // 
@@ -84,6 +95,11 @@
             this.comboBoxProduct.TabIndex = 3;
             this.comboBoxProduct.ValueMember = "Id";
             // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.storesDBDataSet;
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(33, 128);
@@ -94,24 +110,9 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // storesDBDataSet
-            // 
-            this.storesDBDataSet.DataSetName = "StoresDBDataSet";
-            this.storesDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // storesBindingSource
-            // 
-            this.storesBindingSource.DataMember = "Stores";
-            this.storesBindingSource.DataSource = this.storesDBDataSet;
-            // 
             // storesTableAdapter
             // 
             this.storesTableAdapter.ClearBeforeFill = true;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.storesDBDataSet;
             // 
             // productsTableAdapter
             // 
@@ -130,8 +131,8 @@
             this.Name = "AddProductInStoreForm";
             this.Text = "AddProductInStoreForm";
             this.Load += new System.EventHandler(this.AddProductInStoreForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

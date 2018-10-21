@@ -13,6 +13,11 @@ namespace CourseWorkDB.View
 {
     public partial class GoodsSoldForm : Form
     {
+        Store store = new Store();
+        Product product = new Product();
+        Depot depot = new Depot();
+        GoodsSold goodsSold = new GoodsSold();
+
         public GoodsSoldForm()
         {
             InitializeComponent();
@@ -37,6 +42,19 @@ namespace CourseWorkDB.View
             using (ShopContext db = new ShopContext())
             {
                 dgvGoodsSold.DataSource = db.GoodsSolds.ToList<GoodsSold>();
+            }
+        }
+
+        private void btnSold_Click(object sender, EventArgs e)
+        {
+            using (ShopContext db = new ShopContext())
+            {
+                goodsSold.Store = db.Stores.FirstOrDefault(x => x.Id == (int)comboBoxStore.SelectedValue);
+                
+
+                product = db.Products.FirstOrDefault(x => x.Id == (int)comboBoxProduct.SelectedValue);
+                store = db.Stores.FirstOrDefault(x => x.Id == (int)comboBoxStore.SelectedValue);
+                //goodsSold = product.Quantity - Convert.ToInt32(txtHowMuch.Text);
             }
         }
     }

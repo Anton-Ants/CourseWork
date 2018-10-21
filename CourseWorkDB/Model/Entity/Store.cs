@@ -15,6 +15,7 @@ namespace CourseWorkDB.Model.Entity
         public string Name { get; set; }
         public string Address { get; set; }
 
+        public int? DepotId { get; set; }
         [Required]
         public Depot Depot { get; set; }
     }

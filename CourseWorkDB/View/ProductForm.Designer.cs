@@ -33,6 +33,13 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.depotsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.storesDBDataSet = new CourseWorkDB.StoresDBDataSet();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,13 +61,8 @@
             this.labelStore = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depotsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.storesDBDataSet)).BeginInit();
@@ -118,14 +120,66 @@
             this.depotsDataGridViewTextBoxColumn});
             this.dgvProduct.DataSource = this.productBindingSource1;
             this.dgvProduct.GridColor = System.Drawing.Color.YellowGreen;
-            this.dgvProduct.Location = new System.Drawing.Point(509, 12);
+            this.dgvProduct.Location = new System.Drawing.Point(527, 12);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowTemplate.Height = 24;
-            this.dgvProduct.Size = new System.Drawing.Size(533, 358);
+            this.dgvProduct.Size = new System.Drawing.Size(533, 315);
             this.dgvProduct.TabIndex = 5;
             this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             this.dgvProduct.DoubleClick += new System.EventHandler(this.dgvProduct_DoubleClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // weightDataGridViewTextBoxColumn
+            // 
+            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
+            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
+            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
+            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            this.costDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productTypeDataGridViewTextBoxColumn
+            // 
+            this.productTypeDataGridViewTextBoxColumn.DataPropertyName = "ProductType";
+            this.productTypeDataGridViewTextBoxColumn.HeaderText = "ProductType";
+            this.productTypeDataGridViewTextBoxColumn.Name = "productTypeDataGridViewTextBoxColumn";
+            this.productTypeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productTypeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // depotsDataGridViewTextBoxColumn
+            // 
+            this.depotsDataGridViewTextBoxColumn.DataPropertyName = "Depots";
+            this.depotsDataGridViewTextBoxColumn.HeaderText = "Depots";
+            this.depotsDataGridViewTextBoxColumn.Name = "depotsDataGridViewTextBoxColumn";
+            this.depotsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.depotsDataGridViewTextBoxColumn.Visible = false;
             // 
             // productBindingSource1
             // 
@@ -259,7 +313,7 @@
             // labelStore
             // 
             this.labelStore.AutoSize = true;
-            this.labelStore.Location = new System.Drawing.Point(41, 291);
+            this.labelStore.Location = new System.Drawing.Point(41, 294);
             this.labelStore.Name = "labelStore";
             this.labelStore.Size = new System.Drawing.Size(83, 17);
             this.labelStore.TabIndex = 18;
@@ -284,57 +338,24 @@
             this.label5.Text = "Quantity";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // Id
+            // textBox1
             // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
+            this.textBox1.Location = new System.Drawing.Point(592, 340);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(288, 22);
+            this.textBox1.TabIndex = 21;
             // 
-            // nameDataGridViewTextBoxColumn
+            // button1
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // weightDataGridViewTextBoxColumn
-            // 
-            this.weightDataGridViewTextBoxColumn.DataPropertyName = "Weight";
-            this.weightDataGridViewTextBoxColumn.HeaderText = "Weight";
-            this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
-            this.weightDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // costDataGridViewTextBoxColumn
-            // 
-            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
-            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
-            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
-            this.costDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productTypeDataGridViewTextBoxColumn
-            // 
-            this.productTypeDataGridViewTextBoxColumn.DataPropertyName = "ProductType";
-            this.productTypeDataGridViewTextBoxColumn.HeaderText = "ProductType";
-            this.productTypeDataGridViewTextBoxColumn.Name = "productTypeDataGridViewTextBoxColumn";
-            this.productTypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productTypeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // depotsDataGridViewTextBoxColumn
-            // 
-            this.depotsDataGridViewTextBoxColumn.DataPropertyName = "Depots";
-            this.depotsDataGridViewTextBoxColumn.HeaderText = "Depots";
-            this.depotsDataGridViewTextBoxColumn.Name = "depotsDataGridViewTextBoxColumn";
-            this.depotsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.depotsDataGridViewTextBoxColumn.Visible = false;
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
+            this.button1.Location = new System.Drawing.Point(898, 333);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 37);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ProductForm
             // 
@@ -342,6 +363,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1072, 382);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelStore);
@@ -406,6 +429,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn depotsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

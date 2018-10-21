@@ -34,7 +34,7 @@ namespace CourseWorkDB.View
         private void StoresForm_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.Stores". При необходимости она может быть перемещена или удалена.
-           // this.storesTableAdapter.Fill(this.storesDBDataSet.Stores);
+           this.storesTableAdapter.Fill(this.storesDBDataSet.Stores);
 
         }
 

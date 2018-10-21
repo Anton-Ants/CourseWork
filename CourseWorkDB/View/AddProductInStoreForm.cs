@@ -11,13 +11,14 @@ using System.Windows.Forms;
 
 namespace CourseWorkDB.View
 {
+    
     public partial class AddProductInStoreForm : Form
     {
         Product product = new Product();
         Store store = new Store();
         Depot depot = new Depot();
         ProductType type = new ProductType();
-
+        int index;
         public AddProductInStoreForm()
         {
             InitializeComponent();
@@ -29,9 +30,10 @@ namespace CourseWorkDB.View
             this.productsTableAdapter.Fill(this.storesDBDataSet.Products);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.Stores". При необходимости она может быть перемещена или удалена.
             this.storesTableAdapter.Fill(this.storesDBDataSet.Stores);
+            
 
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
             using(ShopContext db = new ShopContext())
@@ -45,6 +47,9 @@ namespace CourseWorkDB.View
             }
         }
 
-
+        private void comboBoxStore_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            index = comboBoxStore.FindString(comboBoxStore.Text);
+        }
     }
 }

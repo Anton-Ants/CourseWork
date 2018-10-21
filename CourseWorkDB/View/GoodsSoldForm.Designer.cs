@@ -61,17 +61,18 @@
             // 
             // btnSold
             // 
-            this.btnSold.Location = new System.Drawing.Point(44, 246);
+            this.btnSold.Location = new System.Drawing.Point(365, 359);
             this.btnSold.Name = "btnSold";
-            this.btnSold.Size = new System.Drawing.Size(220, 54);
+            this.btnSold.Size = new System.Drawing.Size(220, 80);
             this.btnSold.TabIndex = 0;
             this.btnSold.Text = "Sold";
             this.btnSold.UseVisualStyleBackColor = true;
+            this.btnSold.Click += new System.EventHandler(this.btnSold_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 76);
+            this.label1.Location = new System.Drawing.Point(21, 361);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 1;
@@ -82,9 +83,9 @@
             this.comboBoxProduct.DataSource = this.productsBindingSource;
             this.comboBoxProduct.DisplayMember = "Name";
             this.comboBoxProduct.FormattingEnabled = true;
-            this.comboBoxProduct.Location = new System.Drawing.Point(143, 73);
+            this.comboBoxProduct.Location = new System.Drawing.Point(123, 358);
             this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxProduct.Size = new System.Drawing.Size(236, 24);
             this.comboBoxProduct.TabIndex = 2;
             this.comboBoxProduct.ValueMember = "Id";
             // 
@@ -106,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 129);
+            this.label2.Location = new System.Drawing.Point(21, 391);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 17);
             this.label2.TabIndex = 3;
@@ -117,9 +118,9 @@
             this.comboBoxStore.DataSource = this.storesBindingSource;
             this.comboBoxStore.DisplayMember = "Name";
             this.comboBoxStore.FormattingEnabled = true;
-            this.comboBoxStore.Location = new System.Drawing.Point(143, 126);
+            this.comboBoxStore.Location = new System.Drawing.Point(123, 388);
             this.comboBoxStore.Name = "comboBoxStore";
-            this.comboBoxStore.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxStore.Size = new System.Drawing.Size(236, 24);
             this.comboBoxStore.TabIndex = 4;
             this.comboBoxStore.ValueMember = "Id";
             // 
@@ -141,10 +142,10 @@
             this.dataDataGridViewTextBoxColumn,
             this.storeIdDataGridViewTextBoxColumn});
             this.dgvGoodsSold.DataSource = this.goodsSoldBindingSource;
-            this.dgvGoodsSold.Location = new System.Drawing.Point(305, 55);
+            this.dgvGoodsSold.Location = new System.Drawing.Point(12, 12);
             this.dgvGoodsSold.Name = "dgvGoodsSold";
             this.dgvGoodsSold.RowTemplate.Height = 24;
-            this.dgvGoodsSold.Size = new System.Drawing.Size(823, 245);
+            this.dgvGoodsSold.Size = new System.Drawing.Size(1116, 340);
             this.dgvGoodsSold.TabIndex = 5;
             // 
             // goodsSoldBindingSource
@@ -162,7 +163,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 177);
+            this.label3.Location = new System.Drawing.Point(21, 421);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 6;
@@ -171,9 +172,9 @@
             // 
             // txtHowMuch
             // 
-            this.txtHowMuch.Location = new System.Drawing.Point(143, 174);
+            this.txtHowMuch.Location = new System.Drawing.Point(123, 418);
             this.txtHowMuch.Name = "txtHowMuch";
-            this.txtHowMuch.Size = new System.Drawing.Size(121, 22);
+            this.txtHowMuch.Size = new System.Drawing.Size(236, 22);
             this.txtHowMuch.TabIndex = 7;
             // 
             // idDataGridViewTextBoxColumn

@@ -19,6 +19,7 @@ namespace CourseWorkDB
         ProductType type = new ProductType();
         Store store = new Store();
         Depot depot = new Depot();
+
         public ProductForm()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace CourseWorkDB
             // TODO: данная строка кода позволяет загрузить данные в таблицу "storesDBDataSet.ProductTypes". При необходимости она может быть перемещена или удалена.
             this.productTypesTableAdapter.Fill(this.storesDBDataSet.ProductTypes);
             Clear();
+            PopulateDataGridView();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -136,17 +138,16 @@ namespace CourseWorkDB
 
         private void btnAddInStore_Click(object sender, EventArgs e)
         {
-          /*  using (ShopContext db = new ShopContext())
+           using (ShopContext db = new ShopContext())
             {
-                product.Name = txtName.Text.Trim();
-                product.Weight = Convert.ToDouble(txtWeight.Text);
-                product.Cost = Convert.ToDecimal(txtCost.Text);
-                product.ProductType = db.ProductTypes.FirstOrDefault(x => x.Id == (int)comboBoxType.SelectedValue);
+
+                product = db.Products.FirstOrDefault(x => x.Name == txtName.Text);
                 store = db.Stores.FirstOrDefault(x => x.Id == (int)comboBoxStore.SelectedValue);
                 store.Depot = db.Depots.FirstOrDefault(x => x.Id == (int)comboBoxStore.SelectedValue);
                 store.Depot.Products.Add(product);
                 db.SaveChanges();
-            }*/
+                MessageBox.Show("Product Add in ,"+ store.Name );
+            }
             
 
         }
@@ -159,6 +160,22 @@ namespace CourseWorkDB
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String searchValue = "somestring";
+            int rowIndex = 0;
+            foreach (DataGridViewRow row in dgvProduct.Rows)
+            {
+                if (row.Cells[1].Value.ToString().Equals(searchValue))
+                {
+                    rowIndex = row.Index;
+                    break;
+                }
+            }
+
+            dgvProduct.Rows[rowIndex].Selected = true;
         }
     }
 }

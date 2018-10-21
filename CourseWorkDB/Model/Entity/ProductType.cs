@@ -22,7 +22,6 @@ namespace CourseWorkDB.Model.Entity
             
         }
 
-
         public override string ToString()
         {
             return Type;

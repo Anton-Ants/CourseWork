@@ -19,3 +19,5 @@ E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.StoresForm.reso
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.AddProductInStoreForm.resources
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.View.GoodsSoldForm.resources
 E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.Migrations.AddGoodsSold.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.Migrations.AddDellMigration.resources
+E:\C#\GitHub\CourseWork\CourseWorkDB\obj\Debug\CourseWorkDB.Migrations.AddlMigration.resources

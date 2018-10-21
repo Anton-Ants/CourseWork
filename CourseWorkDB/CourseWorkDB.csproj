@@ -73,6 +73,14 @@
     <Compile Include="Migrations\201810181757061_AddGoodsSold.Designer.cs">
       <DependentUpon>201810181757061_AddGoodsSold.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810200651444_AddDellMigration.cs" />
+    <Compile Include="Migrations\201810200651444_AddDellMigration.Designer.cs">
+      <DependentUpon>201810200651444_AddDellMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810200709325_AddlMigration.cs" />
+    <Compile Include="Migrations\201810200709325_AddlMigration.Designer.cs">
+      <DependentUpon>201810200709325_AddlMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Entity\db.cs" />
     <Compile Include="Model\Entity\Depot.cs" />
@@ -127,6 +135,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201810181757061_AddGoodsSold.resx">
       <DependentUpon>201810181757061_AddGoodsSold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810200651444_AddDellMigration.resx">
+      <DependentUpon>201810200651444_AddDellMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810200709325_AddlMigration.resx">
+      <DependentUpon>201810200709325_AddlMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddProductInStoreForm.resx">
       <DependentUpon>AddProductInStoreForm.cs</DependentUpon>
